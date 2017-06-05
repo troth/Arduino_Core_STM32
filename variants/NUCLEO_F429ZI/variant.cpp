@@ -107,7 +107,9 @@ const PinName digital_arduino[] = {
   PF10, //D78/A5
   PB7,  //D79
   PB14, //D80
-  PC13  //D81
+  PC13, //D81
+  PD9,  //D82
+  PD8   //D83
 };
 
 #ifdef __cplusplus
@@ -117,9 +119,9 @@ const PinName digital_arduino[] = {
 /*
  * UART objects
  */
-HardwareSerial  Serial(PD9, PD8); //available on PD8/PD9 - Connected to ST-Link
-HardwareSerial  Serial1(PG9, PG14);   //available on PG14/PG9
-HardwareSerial  Serial2(PD6, PD5); //available on PD5/PD6
+HardwareSerial  Serial(PD9, PD8); // Connected to ST-Link
+HardwareSerial  Serial1(PG9, PG14);
+HardwareSerial  Serial2(PD6, PD5);
 
 void serialEvent() __attribute__((weak));
 void serialEvent() { }
